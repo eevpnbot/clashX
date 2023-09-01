@@ -127,4 +127,11 @@ class GeneralSettingViewController: NSViewController {
         ignoreListTextView.string = Settings.proxyIgnoreListDefaultValue.joined(separator: ",")
         Settings.proxyIgnoreList = Settings.proxyIgnoreListDefaultValue
     }
+
+    @IBAction func actionSetupGuide(_ sender: Any) {
+        let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 400, height: 300), styleMask: [.titled, .closable, .miniaturizable, .resizable], backing: .buffered, defer: false)
+        let setupGuideViewController = SetupGuideViewController(nibName: "SetupGuideViewController", bundle: nil)
+        window.contentView?.addSubview(setupGuideViewController.view)
+        window.makeKeyAndOrderFront(nil)
+    }
 }

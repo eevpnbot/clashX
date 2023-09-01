@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A03709F2AA1C685002AA4FB /* SetupGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A03709E2AA1C685002AA4FB /* SetupGuideViewController.swift */; };
+		0A0370A82AA1D037002AA4FB /* SetupGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A0370A72AA1D037002AA4FB /* SetupGuideViewController.xib */; };
 		0AD7506B2A5B9A04001FFBBD /* ConnectionLeftPannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7506A2A5B9A04001FFBBD /* ConnectionLeftPannelViewModel.swift */; };
 		0AD7506D2A5B9B26001FFBBD /* ConnectionLeftTextCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7506C2A5B9B26001FFBBD /* ConnectionLeftTextCellView.swift */; };
 		0AEF6EAF2A5F961B00EFEE23 /* SectionedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF6EAE2A5F961B00EFEE23 /* SectionedTableView.swift */; };
@@ -162,6 +164,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A03709E2AA1C685002AA4FB /* SetupGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupGuideViewController.swift; sourceTree = "<group>"; };
+		0A0370A72AA1D037002AA4FB /* SetupGuideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetupGuideViewController.xib; sourceTree = "<group>"; };
 		0AD7506A2A5B9A04001FFBBD /* ConnectionLeftPannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLeftPannelViewModel.swift; sourceTree = "<group>"; };
 		0AD7506C2A5B9B26001FFBBD /* ConnectionLeftTextCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLeftTextCellView.swift; sourceTree = "<group>"; };
 		0AEF6EAE2A5F961B00EFEE23 /* SectionedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedTableView.swift; sourceTree = "<group>"; };
@@ -422,6 +426,7 @@
 				493A9F272453E60400D35296 /* ProxyDelayHistoryMenu.swift */,
 				49228456270AADE20027A4B6 /* RemoteConfigUpdateIntervalSettingView.swift */,
 				4994B5532A47C4FF00E595B9 /* NormalMenuItemView.swift */,
+				0A0370A72AA1D037002AA4FB /* SetupGuideViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -480,6 +485,7 @@
 				498BC2542929CCAE00CA8084 /* GeneralSettingViewController.swift */,
 				49281C7F2A1F01FA00F60935 /* DebugSettingViewController.swift */,
 				4905A2C42A2058B000AEDA2E /* GlobalShortCutViewController.swift */,
+				0A03709E2AA1C685002AA4FB /* SetupGuideViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -794,6 +800,7 @@
 				499A485A22ED781100F6C675 /* RemoteConfigAddView.xib in Resources */,
 				4929F610258CD22E00A435F6 /* menu_icon@2x.png in Resources */,
 				4989F98E20D0AE990001E564 /* sampleConfig.yaml in Resources */,
+				0A0370A82AA1D037002AA4FB /* SetupGuideViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -956,6 +963,7 @@
 				49D176A9235614340093DD7B /* ProxyGroupSpeedTestMenuItem.swift in Sources */,
 				F976275C23634DF8000EDEFE /* LoginServiceKit.swift in Sources */,
 				4966E9E6211824F300A391FB /* NSImage+extension.swift in Sources */,
+				0A03709F2AA1C685002AA4FB /* SetupGuideViewController.swift in Sources */,
 				4994B5542A47C4FF00E595B9 /* NormalMenuItemView.swift in Sources */,
 				0AD7506B2A5B9A04001FFBBD /* ConnectionLeftPannelViewModel.swift in Sources */,
 				F92D0B2E236D35C000575E15 /* ProxyItemView.swift in Sources */,
