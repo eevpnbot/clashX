@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A03709F2AA1C685002AA4FB /* SetupGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A03709E2AA1C685002AA4FB /* SetupGuideViewController.swift */; };
-		0A0370A82AA1D037002AA4FB /* SetupGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A0370A72AA1D037002AA4FB /* SetupGuideViewController.xib */; };
+		0A0370AA2AA58AB6002AA4FB /* LocalMachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0370A92AA58AB6002AA4FB /* LocalMachineViewController.swift */; };
+		0A0370AC2AA58ACB002AA4FB /* RemoteMachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0370AB2AA58ACB002AA4FB /* RemoteMachineViewController.swift */; };
+		0A0370AF2AA58CB3002AA4FB /* SetupGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0370AD2AA58CB3002AA4FB /* SetupGuideViewController.swift */; };
+		0A0370B02AA58CB3002AA4FB /* SetupGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A0370AE2AA58CB3002AA4FB /* SetupGuideViewController.xib */; };
 		0AD7506B2A5B9A04001FFBBD /* ConnectionLeftPannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7506A2A5B9A04001FFBBD /* ConnectionLeftPannelViewModel.swift */; };
 		0AD7506D2A5B9B26001FFBBD /* ConnectionLeftTextCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7506C2A5B9B26001FFBBD /* ConnectionLeftTextCellView.swift */; };
 		0AEF6EAF2A5F961B00EFEE23 /* SectionedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF6EAE2A5F961B00EFEE23 /* SectionedTableView.swift */; };
@@ -164,8 +166,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0A03709E2AA1C685002AA4FB /* SetupGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupGuideViewController.swift; sourceTree = "<group>"; };
-		0A0370A72AA1D037002AA4FB /* SetupGuideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetupGuideViewController.xib; sourceTree = "<group>"; };
+		0A0370A92AA58AB6002AA4FB /* LocalMachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMachineViewController.swift; sourceTree = "<group>"; };
+		0A0370AB2AA58ACB002AA4FB /* RemoteMachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMachineViewController.swift; sourceTree = "<group>"; };
+		0A0370AD2AA58CB3002AA4FB /* SetupGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupGuideViewController.swift; sourceTree = "<group>"; };
+		0A0370AE2AA58CB3002AA4FB /* SetupGuideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetupGuideViewController.xib; sourceTree = "<group>"; };
 		0AD7506A2A5B9A04001FFBBD /* ConnectionLeftPannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLeftPannelViewModel.swift; sourceTree = "<group>"; };
 		0AD7506C2A5B9B26001FFBBD /* ConnectionLeftTextCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLeftTextCellView.swift; sourceTree = "<group>"; };
 		0AEF6EAE2A5F961B00EFEE23 /* SectionedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedTableView.swift; sourceTree = "<group>"; };
@@ -426,7 +430,8 @@
 				493A9F272453E60400D35296 /* ProxyDelayHistoryMenu.swift */,
 				49228456270AADE20027A4B6 /* RemoteConfigUpdateIntervalSettingView.swift */,
 				4994B5532A47C4FF00E595B9 /* NormalMenuItemView.swift */,
-				0A0370A72AA1D037002AA4FB /* SetupGuideViewController.xib */,
+				0A0370AD2AA58CB3002AA4FB /* SetupGuideViewController.swift */,
+				0A0370AE2AA58CB3002AA4FB /* SetupGuideViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -485,7 +490,8 @@
 				498BC2542929CCAE00CA8084 /* GeneralSettingViewController.swift */,
 				49281C7F2A1F01FA00F60935 /* DebugSettingViewController.swift */,
 				4905A2C42A2058B000AEDA2E /* GlobalShortCutViewController.swift */,
-				0A03709E2AA1C685002AA4FB /* SetupGuideViewController.swift */,
+				0A0370A92AA58AB6002AA4FB /* LocalMachineViewController.swift */,
+				0A0370AB2AA58ACB002AA4FB /* RemoteMachineViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -800,7 +806,7 @@
 				499A485A22ED781100F6C675 /* RemoteConfigAddView.xib in Resources */,
 				4929F610258CD22E00A435F6 /* menu_icon@2x.png in Resources */,
 				4989F98E20D0AE990001E564 /* sampleConfig.yaml in Resources */,
-				0A0370A82AA1D037002AA4FB /* SetupGuideViewController.xib in Resources */,
+				0A0370B02AA58CB3002AA4FB /* SetupGuideViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -897,6 +903,7 @@
 				F915A4622366ADEF004840BE /* ClashConnection.swift in Sources */,
 				F977FAAE23669D6400C17F1F /* ConnectionManager.swift in Sources */,
 				495340B320DE68C300B0D3FF /* StatusItemView.swift in Sources */,
+				0A0370AC2AA58ACB002AA4FB /* RemoteMachineViewController.swift in Sources */,
 				F935B2FC23085515009E4D33 /* SystemProxyManager.swift in Sources */,
 				0AD7506D2A5B9B26001FFBBD /* ConnectionLeftTextCellView.swift in Sources */,
 				495A44D320D267D000888A0A /* LaunchAtLogin.swift in Sources */,
@@ -933,6 +940,7 @@
 				495BFB8821919B9800C8779D /* RemoteConfigManager.swift in Sources */,
 				4982F51F2344A216008804B0 /* Cgo+Convert.swift in Sources */,
 				8ACD21BB27A04C7800BC4632 /* ProxySettingCommand.swift in Sources */,
+				0A0370AA2AA58AB6002AA4FB /* LocalMachineViewController.swift in Sources */,
 				49722FF1211F338B00650A41 /* Witness.swift in Sources */,
 				49722FF0211F338B00650A41 /* EventStream.swift in Sources */,
 				499A486522EEA3FD00F6C675 /* Array+Safe.swift in Sources */,
@@ -963,10 +971,10 @@
 				49D176A9235614340093DD7B /* ProxyGroupSpeedTestMenuItem.swift in Sources */,
 				F976275C23634DF8000EDEFE /* LoginServiceKit.swift in Sources */,
 				4966E9E6211824F300A391FB /* NSImage+extension.swift in Sources */,
-				0A03709F2AA1C685002AA4FB /* SetupGuideViewController.swift in Sources */,
 				4994B5542A47C4FF00E595B9 /* NormalMenuItemView.swift in Sources */,
 				0AD7506B2A5B9A04001FFBBD /* ConnectionLeftPannelViewModel.swift in Sources */,
 				F92D0B2E236D35C000575E15 /* ProxyItemView.swift in Sources */,
+				0A0370AF2AA58CB3002AA4FB /* SetupGuideViewController.swift in Sources */,
 				49BB31E7246853EA008A4CB0 /* ICloudManager.swift in Sources */,
 				49B1086A216A356D0064FFCE /* String+Extension.swift in Sources */,
 				F92D0B2C236C7C3600575E15 /* MenuItemBaseView.swift in Sources */,
