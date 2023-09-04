@@ -742,25 +742,103 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eL3-lf-2Vf">
-                        <rect key="frame" x="162" y="386" width="158" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rEw-dU-Ny3">
+                        <rect key="frame" x="167" y="373" width="409" height="16"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="For command line applications,manually set environment variables:" id="yga-0H-DNq">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="K5O-7E-7V9">
+                        <rect key="frame" x="162" y="336" width="208" height="32"/>
+                        <buttonCell key="cell" type="push" title="Copy Shell Export Command" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dTE-Rb-aWG">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cm8-Hr-ddf">
+                        <rect key="frame" x="167" y="302" width="102" height="16"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Enhanced Mode" id="r3w-Xu-aFq">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QFg-Ej-iaK">
+                        <rect key="frame" x="167" y="244" width="404" height="48"/>
+                        <textFieldCell key="cell" id="uy6-rQ-ijq">
+                            <font key="font" metaFont="system"/>
+                            <string key="title">Some applications may not obey the proxy settings.The Enhanced Mode can create a virtual network interface to make all applications handled by ClashX.</string>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QhU-SL-vX0">
+                        <rect key="frame" x="162" y="207" width="176" height="32"/>
+                        <buttonCell key="cell" type="push" title="Enable Enhanced Mode" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aPg-St-Nct">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="lq7-Zn-Nua">
+                        <rect key="frame" x="0.0" y="48" width="650" height="5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="dp8-SK-wUF"/>
+                        </constraints>
+                    </box>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mU6-nv-Vvx">
+                        <rect key="frame" x="281" y="5" width="89" height="32"/>
+                        <buttonCell key="cell" type="push" title="Continue" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UdU-w4-UuK">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eL3-lf-2Vf">
+                        <rect key="frame" x="162" y="392" width="158" height="32"/>
                         <buttonCell key="cell" type="push" title="Set as System Proxy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XC3-6D-RZp">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
+                    <button verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="DLn-Z9-SgT">
+                        <rect key="frame" x="13" y="13" width="256" height="18"/>
+                        <buttonCell key="cell" type="check" title="Show this guide when Surge launches" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="CbB-L5-eL8">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="cm8-Hr-ddf" firstAttribute="top" secondItem="K5O-7E-7V9" secondAttribute="bottom" constant="25" id="4Ln-zZ-2Yt"/>
+                    <constraint firstItem="DLn-Z9-SgT" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="15" id="Ced-yB-3LG"/>
+                    <constraint firstAttribute="bottom" secondItem="mU6-nv-Vvx" secondAttribute="bottom" constant="12" id="DcA-Pq-XO3"/>
+                    <constraint firstItem="eL3-lf-2Vf" firstAttribute="top" secondItem="NgZ-QL-gV9" secondAttribute="bottom" constant="10" id="Dti-pX-urS"/>
+                    <constraint firstItem="eL3-lf-2Vf" firstAttribute="leading" secondItem="NgZ-QL-gV9" secondAttribute="leading" id="Eha-vS-az8"/>
                     <constraint firstItem="NgZ-QL-gV9" firstAttribute="top" secondItem="ox6-zV-Jx9" secondAttribute="bottom" constant="10" id="HI1-iT-vZT"/>
                     <constraint firstItem="xEk-HT-kFW" firstAttribute="top" secondItem="dMX-nV-9A7" secondAttribute="bottom" constant="8" id="HRY-r4-BWK"/>
+                    <constraint firstItem="QFg-Ej-iaK" firstAttribute="leading" secondItem="NgZ-QL-gV9" secondAttribute="leading" id="HiQ-Dk-nfT"/>
                     <constraint firstItem="dMX-nV-9A7" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="30" id="Hq1-EZ-eDX"/>
                     <constraint firstItem="dMX-nV-9A7" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="MQV-6f-pnw"/>
+                    <constraint firstItem="mU6-nv-Vvx" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="PLe-dG-u6Y"/>
+                    <constraint firstItem="cm8-Hr-ddf" firstAttribute="leading" secondItem="ox6-zV-Jx9" secondAttribute="leading" id="Pmw-Jt-6tE"/>
+                    <constraint firstItem="QhU-SL-vX0" firstAttribute="leading" secondItem="K5O-7E-7V9" secondAttribute="leading" id="QEk-ly-btg"/>
+                    <constraint firstItem="QFg-Ej-iaK" firstAttribute="trailing" secondItem="NgZ-QL-gV9" secondAttribute="trailing" id="Rk5-t8-4yJ"/>
+                    <constraint firstItem="lq7-Zn-Nua" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="VfL-ii-k7Q"/>
                     <constraint firstItem="ACw-qF-nWL" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="89" id="W9J-Gw-F5Z"/>
                     <constraint firstItem="7Xw-z0-NKg" firstAttribute="top" secondItem="dg6-61-IDo" secondAttribute="bottom" constant="16" id="XjP-8H-fg3"/>
                     <constraint firstItem="ACw-qF-nWL" firstAttribute="top" secondItem="xEk-HT-kFW" secondAttribute="bottom" constant="105" id="YUN-LZ-zhF"/>
+                    <constraint firstItem="rEw-dU-Ny3" firstAttribute="top" secondItem="eL3-lf-2Vf" secondAttribute="bottom" constant="10" id="bUE-yn-8lv"/>
                     <constraint firstItem="7Xw-z0-NKg" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="ecz-Bu-Red"/>
+                    <constraint firstAttribute="bottom" secondItem="lq7-Zn-Nua" secondAttribute="bottom" constant="50" id="exf-sS-Dpt"/>
+                    <constraint firstAttribute="trailing" secondItem="lq7-Zn-Nua" secondAttribute="trailing" id="fXf-0s-WaJ"/>
+                    <constraint firstItem="K5O-7E-7V9" firstAttribute="top" secondItem="rEw-dU-Ny3" secondAttribute="bottom" constant="10" id="fdZ-tI-bMI"/>
+                    <constraint firstItem="rEw-dU-Ny3" firstAttribute="leading" secondItem="NgZ-QL-gV9" secondAttribute="leading" id="gBh-MA-lt7"/>
                     <constraint firstItem="dg6-61-IDo" firstAttribute="top" secondItem="xEk-HT-kFW" secondAttribute="bottom" constant="8" id="ldj-pn-VCk"/>
+                    <constraint firstItem="K5O-7E-7V9" firstAttribute="leading" secondItem="eL3-lf-2Vf" secondAttribute="leading" id="lrx-S6-ey0"/>
+                    <constraint firstItem="DLn-Z9-SgT" firstAttribute="centerY" secondItem="mU6-nv-Vvx" secondAttribute="centerY" id="mQ9-fU-2xW"/>
+                    <constraint firstItem="QFg-Ej-iaK" firstAttribute="top" secondItem="cm8-Hr-ddf" secondAttribute="bottom" constant="10" id="oVY-k4-N0g"/>
+                    <constraint firstItem="QhU-SL-vX0" firstAttribute="top" secondItem="QFg-Ej-iaK" secondAttribute="bottom" constant="10" id="pMm-BX-VSv"/>
                     <constraint firstItem="NgZ-QL-gV9" firstAttribute="leading" secondItem="ox6-zV-Jx9" secondAttribute="leading" id="sF7-LM-rdi"/>
                     <constraint firstItem="ox6-zV-Jx9" firstAttribute="leading" secondItem="ACw-qF-nWL" secondAttribute="trailing" constant="20" id="tSH-Dv-rwx"/>
                     <constraint firstItem="xEk-HT-kFW" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="uiz-BW-cJG"/>
