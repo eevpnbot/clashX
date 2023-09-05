@@ -9,11 +9,15 @@
 import Cocoa
 
 class SettingTabViewController: NSTabViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         tabStyle = .toolbar
+        if #unavailable(macOS 10.11) {
+            tabStyle = .segmentedControlOnTop
+            tabViewItems.forEach { item in
+                item.image = nil
+            }
+        }
         NSApp.activate(ignoringOtherApps: true)
     }
-
 }
