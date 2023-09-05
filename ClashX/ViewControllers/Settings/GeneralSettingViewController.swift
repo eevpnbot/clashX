@@ -129,9 +129,6 @@ class GeneralSettingViewController: NSViewController {
     }
 
     @IBAction func actionSetupGuide(_ sender: Any) {
-        let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 900, height: 600), styleMask: [.titled, .closable, .miniaturizable, .resizable], backing: .buffered, defer: false)
-        let setupGuideViewController = SetupGuideViewController(nibName: "SetupGuideViewController", bundle: nil)
-        window.contentView?.addSubview(setupGuideViewController.view)
-        window.makeKeyAndOrderFront(nil)
+        ClashWindowController<SetupGuideViewController>.create().showWindow(self)
     }
 }

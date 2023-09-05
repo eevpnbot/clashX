@@ -9,10 +9,25 @@
 import Cocoa
 
 class SetupGuideViewController: NSViewController {
+    @IBOutlet var tabView: NSTabView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
     }
 
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        view.window?.styleMask.insert(.closable)
+        view.window?.styleMask.insert(.resizable)
+        view.window?.styleMask.insert(.miniaturizable)
+    }
+
+    init() {
+        super.init(nibName: "SetupGuideViewController", bundle: nil)
+    }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
