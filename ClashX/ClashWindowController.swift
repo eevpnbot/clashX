@@ -44,8 +44,18 @@ class ClashWindowController<T: NSViewController>: NSWindowController, NSWindowDe
         }
         let win = NSWindow()
         let wc = ClashWindowController(window: win)
-        wc.contentViewController = T()
+        if let X = T.self as? NibLoadable.Type {
+            wc.contentViewController = (X.createFromNib(in: .main) as! NSViewController)
+        } else {
+            wc.contentViewController = T()
+        }
         win.titlebarAppearsTransparent = false
+        win.styleMask.insert(.closable)
+        win.styleMask.insert(.resizable)
+        win.styleMask.insert(.miniaturizable)
+        if let title = wc.contentViewController?.title {
+            win.title = title
+        }
         ClashWindowsRecorder.shared.windowControllers.append(wc)
         return wc
     }

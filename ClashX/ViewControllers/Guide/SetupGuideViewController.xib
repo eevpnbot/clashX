@@ -3,32 +3,42 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
+        <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SetupGuideViewController" customModule="ClashX" customModuleProvider="target">
             <connections>
+                <outlet property="bgView" destination="ZrH-md-vkM" id="71I-dC-y45"/>
+                <outlet property="continueButton" destination="Ahf-Kt-Lja" id="HtY-Yr-k5Y"/>
+                <outlet property="tabView" destination="7d3-Vz-nLg" id="Yb8-Gz-eQm"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="909" height="600"/>
+        <customView id="Hz6-mo-xeY" customClass="DragableView" customModule="ClashX" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="909" height="601"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <tabView clipsToBounds="NO" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7d3-Vz-nLg">
-                    <rect key="frame" x="148" y="61" width="614" height="401"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="ZrH-md-vkM">
+                    <rect key="frame" x="0.0" y="49" width="909" height="552"/>
+                </customView>
+                <tabView clipsToBounds="NO" drawsBackground="NO" allowsTruncatedLabels="NO" type="noTabsNoBorder" initialItem="eOE-Cl-G01" translatesAutoresizingMaskIntoConstraints="NO" id="7d3-Vz-nLg">
+                    <rect key="frame" x="153" y="79" width="603" height="370"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="603" id="MBV-ww-8ox"/>
+                        <constraint firstAttribute="height" constant="370" id="ggv-rm-EoW"/>
+                    </constraints>
                     <font key="font" metaFont="system"/>
                     <tabViewItems>
-                        <tabViewItem label="For Local Machine" identifier="Tab" id="eOE-Cl-G01">
+                        <tabViewItem identifier="local" id="eOE-Cl-G01">
                             <view key="view" id="wS2-K0-jFl">
-                                <rect key="frame" x="10" y="33" width="594" height="355"/>
+                                <rect key="frame" x="0.0" y="0.0" width="603" height="350"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWW-Fl-cLo">
-                                        <rect key="frame" x="60" y="315" width="4" height="16"/>
+                                        <rect key="frame" x="60" y="310" width="4" height="16"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" id="mcc-MQ-HjY">
                                             <font key="font" usesAppearanceFont="YES"/>
@@ -37,31 +47,30 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TL6-ma-xm9">
-                                        <rect key="frame" x="102" y="256" width="474" height="48"/>
-                                        <textFieldCell key="cell" alignment="left" id="dNa-FZ-1wT">
+                                        <rect key="frame" x="102" y="283" width="483" height="16"/>
+                                        <textFieldCell key="cell" alignment="left" title="Clash HTTP/HTTPS proxy service works for the most applications." id="dNa-FZ-1wT">
                                             <font key="font" metaFont="system"/>
-                                            <string key="title">Clash HTTP/HTTPS proxy service can provide powerful HTTP protocol features,including Traffic Capture,MitM HTTPS Decryption,and URL/Header Rewrite.</string>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I0Z-xT-yKf">
-                                        <rect key="frame" x="102" y="319" width="122" height="16"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="HTTP/HTTPS Proxy" id="w9f-DP-Mq6">
+                                        <rect key="frame" x="102" y="314" width="177" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="HTTP/HTTPS/SOCKS5 Proxy" id="w9f-DP-Mq6">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nLV-Z3-Nzd">
-                                        <rect key="frame" x="97" y="163" width="208" height="32"/>
+                                        <rect key="frame" x="97" y="190" width="208" height="32"/>
                                         <buttonCell key="cell" type="push" title="Copy Shell Export Command" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="T35-3y-5rW">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FJS-8A-wJy">
-                                        <rect key="frame" x="102" y="129" width="102" height="16"/>
+                                        <rect key="frame" x="102" y="156" width="102" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Enhanced Mode" id="S03-dJ-drp">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -69,7 +78,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2gg-VT-Q2k">
-                                        <rect key="frame" x="102" y="87" width="474" height="32"/>
+                                        <rect key="frame" x="102" y="114" width="483" height="32"/>
                                         <textFieldCell key="cell" id="7BO-rh-eou">
                                             <font key="font" metaFont="system"/>
                                             <string key="title">Some applications may not obey the proxy settings. The Enhanced Mode can create a virtual network interface to make all applications handled by ClashX.</string>
@@ -78,21 +87,21 @@
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tzt-uf-Y5l">
-                                        <rect key="frame" x="97" y="50" width="176" height="32"/>
+                                        <rect key="frame" x="97" y="77" width="176" height="32"/>
                                         <buttonCell key="cell" type="push" title="Enable Enhanced Mode" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sZI-0Z-aPw">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q2M-Of-0xJ">
-                                        <rect key="frame" x="97" y="219" width="158" height="32"/>
+                                        <rect key="frame" x="97" y="246" width="158" height="32"/>
                                         <buttonCell key="cell" type="push" title="Set as System Proxy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zzu-ct-kfC">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="40y-Ka-9Bz">
-                                        <rect key="frame" x="20" y="271" width="64" height="64"/>
+                                        <rect key="frame" x="20" y="266" width="64" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="o7M-3h-Kaa"/>
                                             <constraint firstAttribute="width" constant="64" id="wpo-7L-2il"/>
@@ -100,7 +109,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="icons8-cellular_network_Normal" id="3Pm-fl-ToO"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b0c-hN-Wrj">
-                                        <rect key="frame" x="20" y="81" width="64" height="64"/>
+                                        <rect key="frame" x="20" y="108" width="64" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="WXg-Tb-xv3"/>
                                             <constraint firstAttribute="width" constant="64" id="tXC-06-fpZ"/>
@@ -108,7 +117,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="icons8-network_card_Normal" id="43w-g9-gQq"/>
                                     </imageView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3C3-Kh-NWL">
-                                        <rect key="frame" x="102" y="200" width="409" height="16"/>
+                                        <rect key="frame" x="102" y="227" width="409" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="For command line applications,manually set environment variables:" id="oqA-rX-o4P">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -142,27 +151,26 @@
                                 </constraints>
                             </view>
                         </tabViewItem>
-                        <tabViewItem label="For Remote Machines" identifier="View" id="yGX-K9-hwl">
+                        <tabViewItem identifier="remote" id="yGX-K9-hwl">
                             <view key="view" clipsToBounds="YES" id="p3B-GY-uX0">
-                                <rect key="frame" x="10" y="33" width="594" height="355"/>
+                                <rect key="frame" x="0.0" y="0.0" width="603" height="370"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view id="KVE-Ij-ImY">
-                                        <rect key="frame" x="0.0" y="7" width="594" height="355"/>
+                                        <rect key="frame" x="0.0" y="7" width="603" height="370"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VCE-zH-GwZ">
-                                                <rect key="frame" x="102" y="261" width="474" height="48"/>
+                                                <rect key="frame" x="102" y="276" width="474" height="48"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <textFieldCell key="cell" alignment="left" id="06n-Dd-hcM">
+                                                <textFieldCell key="cell" alignment="left" title="Clash HTTP/HTTPS proxy service works for the most applications." id="06n-Dd-hcM">
                                                     <font key="font" metaFont="cellTitle"/>
-                                                    <string key="title">Clash HTTP/HTTPS proxy service can provide powerful HTTP protocol features,including Traffic Capture,MitM HTTPS Decryption,and URL/Header Rewrite.</string>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I4P-hE-H59">
-                                                <rect key="frame" x="102" y="319" width="122" height="16"/>
+                                                <rect key="frame" x="102" y="334" width="122" height="16"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="HTTP/HTTPS Proxy" id="cPT-GL-UUE">
                                                     <font key="font" metaFont="system"/>
@@ -171,12 +179,12 @@
                                                 </textFieldCell>
                                             </textField>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eAR-qG-VRq">
-                                                <rect key="frame" x="20" y="271" width="64" height="64"/>
+                                                <rect key="frame" x="20" y="286" width="64" height="64"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="icons8-cellular_network_Normal" id="oKx-Yl-b3Z"/>
                                             </imageView>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JCr-Ze-Au5">
-                                                <rect key="frame" x="102" y="245" width="383" height="15"/>
+                                                <rect key="frame" x="102" y="260" width="383" height="15"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="You need to modify proxy settings in the remote machine manually." id="ElN-JG-R8K">
                                                     <font key="font" metaFont="cellTitle"/>
@@ -185,7 +193,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1QD-1H-18B">
-                                                <rect key="frame" x="97" y="208" width="167" height="32"/>
+                                                <rect key="frame" x="97" y="223" width="167" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="push" title="Allow External Access" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="alC-8h-u8t">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -193,7 +201,7 @@
                                                 </buttonCell>
                                             </button>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FN7-tn-9xt">
-                                                <rect key="frame" x="265" y="217" width="117" height="16"/>
+                                                <rect key="frame" x="265" y="232" width="117" height="16"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Currectly Disabled" id="7a4-gP-LOY">
                                                     <font key="font" metaFont="system"/>
@@ -202,7 +210,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ytM-od-rBp">
-                                                <rect key="frame" x="102" y="182" width="474" height="28"/>
+                                                <rect key="frame" x="102" y="197" width="474" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <textFieldCell key="cell" id="NST-1q-o7s">
                                                     <font key="font" metaFont="smallSystem"/>
@@ -212,7 +220,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aFt-W5-kXH">
-                                                <rect key="frame" x="102" y="146" width="94" height="16"/>
+                                                <rect key="frame" x="102" y="161" width="94" height="16"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Gateway Mode" id="iYb-3l-cf8">
                                                     <font key="font" metaFont="system"/>
@@ -221,7 +229,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyx-1R-Ai2">
-                                                <rect key="frame" x="102" y="106" width="474" height="32"/>
+                                                <rect key="frame" x="102" y="121" width="474" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <textFieldCell key="cell" id="ObT-mR-P6k">
                                                     <font key="font" metaFont="cellTitle"/>
@@ -231,15 +239,15 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpK-33-y3N">
-                                                <rect key="frame" x="97" y="59" width="167" height="32"/>
+                                                <rect key="frame" x="93" y="74" width="176" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <buttonCell key="cell" type="push" title="Allow External Access" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EeP-JT-dwA">
+                                                <buttonCell key="cell" type="push" title="Enable Enhanced Mode" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EeP-JT-dwA">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                             </button>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSY-sN-QDV">
-                                                <rect key="frame" x="105" y="44" width="307" height="14"/>
+                                                <rect key="frame" x="105" y="59" width="307" height="14"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Then change the network settings in the remote machine." id="lf2-S6-7dZ">
                                                     <font key="font" metaFont="smallSystem"/>
@@ -248,7 +256,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rFt-XR-te4">
-                                                <rect key="frame" x="105" y="29" width="257" height="14"/>
+                                                <rect key="frame" x="105" y="44" width="257" height="14"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="- Set Gateway to the IP address of this machine." id="OYb-5M-u1t">
                                                     <font key="font" metaFont="smallSystem"/>
@@ -257,7 +265,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jk3-i8-QRG">
-                                                <rect key="frame" x="106" y="-2" width="232" height="14"/>
+                                                <rect key="frame" x="106" y="13" width="232" height="14"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="- Keep IP address and netmask unchanged." id="IUf-JN-NDa">
                                                     <font key="font" metaFont="smallSystem"/>
@@ -266,7 +274,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FHV-Tk-9JG">
-                                                <rect key="frame" x="106" y="14" width="121" height="14"/>
+                                                <rect key="frame" x="106" y="29" width="121" height="14"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="- Set DNS to 192.0.2.2" id="j4M-yv-02I">
                                                     <font key="font" metaFont="smallSystem"/>
@@ -275,7 +283,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b1c-ei-YXL">
-                                                <rect key="frame" x="20" y="90" width="64" height="64"/>
+                                                <rect key="frame" x="20" y="105" width="64" height="64"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="icons8-internet_hub_Normal" id="R1B-MG-Rvo"/>
                                             </imageView>
@@ -286,50 +294,92 @@
                         </tabViewItem>
                     </tabViewItems>
                 </tabView>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d0A-7g-51b">
-                    <rect key="frame" x="370" y="523" width="170" height="37"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="d0A-7g-51b">
+                    <rect key="frame" x="370" y="524" width="170" height="37"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Setup Guide" id="3sO-VL-19h">
                         <font key="font" metaFont="system" size="31"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="NB4-Pk-Tgb">
-                    <rect key="frame" x="205" y="510" width="500" height="5"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="NB4-Pk-Tgb">
+                    <rect key="frame" x="205" y="511" width="500" height="5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="eV0-js-xnx"/>
+                        <constraint firstAttribute="width" constant="500" id="qXl-88-Hs5"/>
+                    </constraints>
                 </box>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6FB-yr-B6d">
-                    <rect key="frame" x="291" y="486" width="327" height="16"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="A few steps to allow Surge to handle network traffics." id="UGP-ew-Jdy">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6FB-yr-B6d">
+                    <rect key="frame" x="288" y="487" width="334" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="A few steps to allow ClashX to handle network traffics." id="UGP-ew-Jdy">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="cg7-yZ-FQe">
-                    <rect key="frame" x="0.0" y="48" width="909" height="5"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="cg7-yZ-FQe">
+                    <rect key="frame" x="0.0" y="46" width="909" height="5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="9yA-tQ-zzt"/>
+                    </constraints>
                 </box>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ahf-Kt-Lja">
-                    <rect key="frame" x="410" y="8" width="89" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Continue" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hxa-eg-Nu3">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ahf-Kt-Lja">
+                    <rect key="frame" x="410" y="7" width="89" height="32"/>
+                    <buttonCell key="cell" type="push" title="Continue" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="hxa-eg-Nu3">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <color key="bezelColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
+                    <connections>
+                        <action selector="actionContinue:" target="-2" id="OBV-k8-LbW"/>
+                    </connections>
                 </button>
-                <button verticalHuggingPriority="751" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfk-nW-rYj">
-                    <rect key="frame" x="13" y="16" width="256" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="check" title="Show this guide when Surge launches" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="I0e-5L-Vkv">
+                <button verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="sfk-nW-rYj">
+                    <rect key="frame" x="14" y="15" width="263" height="18"/>
+                    <buttonCell key="cell" type="check" title="Show this guide when ClashX launches" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="I0e-5L-Vkv">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
+                <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Shp-0B-ILM">
+                    <rect key="frame" x="319" y="456" width="272" height="24"/>
+                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="aDf-hM-cb4">
+                        <font key="font" metaFont="system"/>
+                        <segments>
+                            <segment label="For Local Machine" selected="YES"/>
+                            <segment label="For Remote Machines" tag="1"/>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <action selector="actionSwitchTab:" target="-2" id="NhB-su-GHT"/>
+                    </connections>
+                </segmentedControl>
             </subviews>
-            <point key="canvasLocation" x="127.5" y="-627"/>
+            <constraints>
+                <constraint firstItem="NB4-Pk-Tgb" firstAttribute="top" secondItem="d0A-7g-51b" secondAttribute="bottom" constant="10" id="2Ga-5I-6B5"/>
+                <constraint firstItem="ZrH-md-vkM" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="5Rs-Qc-Ddg"/>
+                <constraint firstItem="Ahf-Kt-Lja" firstAttribute="top" secondItem="cg7-yZ-FQe" secondAttribute="bottom" constant="14" id="A4P-D2-Ihf"/>
+                <constraint firstItem="sfk-nW-rYj" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="16" id="AX4-oA-bKc"/>
+                <constraint firstItem="cg7-yZ-FQe" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Bs4-WV-qzT"/>
+                <constraint firstItem="cg7-yZ-FQe" firstAttribute="top" secondItem="ZrH-md-vkM" secondAttribute="bottom" id="C5R-L3-s53"/>
+                <constraint firstItem="6FB-yr-B6d" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="FYS-Fq-3bn"/>
+                <constraint firstItem="6FB-yr-B6d" firstAttribute="top" secondItem="NB4-Pk-Tgb" secondAttribute="bottom" constant="10" id="GLn-yO-4U7"/>
+                <constraint firstItem="NB4-Pk-Tgb" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="Hsj-mf-vOH"/>
+                <constraint firstAttribute="bottom" secondItem="Ahf-Kt-Lja" secondAttribute="bottom" constant="14" id="Hyi-yv-bWo"/>
+                <constraint firstAttribute="trailing" secondItem="cg7-yZ-FQe" secondAttribute="trailing" id="JtL-Vd-MIs"/>
+                <constraint firstItem="Shp-0B-ILM" firstAttribute="top" secondItem="6FB-yr-B6d" secondAttribute="bottom" constant="8" symbolic="YES" id="Kj7-NZ-DcI"/>
+                <constraint firstItem="ZrH-md-vkM" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Ql4-L2-1dQ"/>
+                <constraint firstAttribute="trailing" secondItem="ZrH-md-vkM" secondAttribute="trailing" id="UDf-eP-ymq"/>
+                <constraint firstItem="sfk-nW-rYj" firstAttribute="centerY" secondItem="Ahf-Kt-Lja" secondAttribute="centerY" id="Uoc-Tl-2Za"/>
+                <constraint firstItem="Ahf-Kt-Lja" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="XkI-6h-fMV"/>
+                <constraint firstItem="d0A-7g-51b" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="c15-zN-lso"/>
+                <constraint firstItem="d0A-7g-51b" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="40" id="hlY-SH-enC"/>
+                <constraint firstItem="7d3-Vz-nLg" firstAttribute="top" secondItem="Shp-0B-ILM" secondAttribute="bottom" constant="8" symbolic="YES" id="lst-89-J9C"/>
+                <constraint firstItem="7d3-Vz-nLg" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="r3m-wz-Yoe"/>
+                <constraint firstItem="Shp-0B-ILM" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="tyq-7E-g6d"/>
+                <constraint firstItem="cg7-yZ-FQe" firstAttribute="top" secondItem="7d3-Vz-nLg" secondAttribute="bottom" constant="30" id="vcn-a1-kdn"/>
+            </constraints>
+            <point key="canvasLocation" x="127.5" y="-624.5"/>
         </customView>
     </objects>
     <resources>

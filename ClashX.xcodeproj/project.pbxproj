@@ -426,8 +426,6 @@
 				493A9F272453E60400D35296 /* ProxyDelayHistoryMenu.swift */,
 				49228456270AADE20027A4B6 /* RemoteConfigUpdateIntervalSettingView.swift */,
 				4994B5532A47C4FF00E595B9 /* NormalMenuItemView.swift */,
-				0A0370AD2AA58CB3002AA4FB /* SetupGuideViewController.swift */,
-				0A0370AE2AA58CB3002AA4FB /* SetupGuideViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -478,6 +476,7 @@
 		4989F98520D0AA300001E564 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				49A7A5552AA6FF600083025C /* Guide */,
 				49CCDA2B2A54FA8900FF1E13 /* Connections */,
 				498BC2512929CC0A00CA8084 /* Settings */,
 				49BC061B212931F4005A0FE7 /* AboutViewController.swift */,
@@ -523,6 +522,15 @@
 				4991D2312A565E6A00978143 /* Combine+Ext.swift */,
 			);
 			path = Basic;
+			sourceTree = "<group>";
+		};
+		49A7A5552AA6FF600083025C /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				0A0370AD2AA58CB3002AA4FB /* SetupGuideViewController.swift */,
+				0A0370AE2AA58CB3002AA4FB /* SetupGuideViewController.xib */,
+			);
+			path = Guide;
 			sourceTree = "<group>";
 		};
 		49BC1B4029AEEBBB002007B1 /* StatusItem */ = {

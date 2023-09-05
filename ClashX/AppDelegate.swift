@@ -757,6 +757,10 @@ extension AppDelegate {
     @IBAction func actionQuit(_ sender: Any) {
         NSApplication.shared.terminate(self)
     }
+
+    @IBAction func actionMoreSetting(_ sender: Any) {
+        ClashWindowController<SettingTabViewController>.create().showWindow(sender)
+    }
 }
 
 // MARK: Streaming Info
