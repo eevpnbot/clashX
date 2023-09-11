@@ -17,12 +17,12 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="Hz6-mo-xeY" customClass="DragableView" customModule="ClashX" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="909" height="601"/>
+        <customView misplaced="YES" id="Hz6-mo-xeY" customClass="DragableView" customModule="ClashX" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="909" height="593"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="ZrH-md-vkM">
-                    <rect key="frame" x="0.0" y="49" width="909" height="552"/>
+                    <rect key="frame" x="0.0" y="49" width="909" height="554"/>
                 </customView>
                 <tabView clipsToBounds="NO" drawsBackground="NO" allowsTruncatedLabels="NO" type="noTabsNoBorder" initialItem="eOE-Cl-G01" translatesAutoresizingMaskIntoConstraints="NO" id="7d3-Vz-nLg">
                     <rect key="frame" x="153" y="79" width="603" height="370"/>
@@ -47,9 +47,9 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I0Z-xT-yKf">
-                                        <rect key="frame" x="102" y="334" width="177" height="16"/>
+                                        <rect key="frame" x="102" y="334" width="187" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="HTTP/HTTPS/SOCKS5 Proxy" id="w9f-DP-Mq6">
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" metaFont="systemBold"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -62,15 +62,15 @@
                                         </buttonCell>
                                     </button>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FJS-8A-wJy">
-                                        <rect key="frame" x="102" y="144" width="102" height="16"/>
+                                        <rect key="frame" x="102" y="125" width="105" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Enhanced Mode" id="S03-dJ-drp">
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" size="13" name="HelveticaNeue-Bold"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2gg-VT-Q2k">
-                                        <rect key="frame" x="102" y="102" width="483" height="32"/>
+                                        <rect key="frame" x="102" y="83" width="483" height="32"/>
                                         <textFieldCell key="cell" id="7BO-rh-eou">
                                             <font key="font" metaFont="system"/>
                                             <string key="title">Some applications may not obey the proxy settings. The Enhanced Mode can create a virtual network interface to make all applications handled by ClashX.</string>
@@ -78,13 +78,6 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tzt-uf-Y5l">
-                                        <rect key="frame" x="97" y="65" width="176" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Enable Enhanced Mode" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sZI-0Z-aPw">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                    </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q2M-Of-0xJ">
                                         <rect key="frame" x="97" y="234" width="158" height="32"/>
                                         <buttonCell key="cell" type="push" title="Set as System Proxy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zzu-ct-kfC">
@@ -101,7 +94,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="icons8-cellular_network_Normal" id="3Pm-fl-ToO"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b0c-hN-Wrj">
-                                        <rect key="frame" x="20" y="96" width="64" height="64"/>
+                                        <rect key="frame" x="20" y="77" width="64" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="WXg-Tb-xv3"/>
                                             <constraint firstAttribute="width" constant="64" id="tXC-06-fpZ"/>
@@ -116,26 +109,54 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dys-8e-5a2">
+                                        <rect key="frame" x="102" y="62" width="483" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="charWrapping" title="Only use this when necessary since it may have some compatibility issues." id="CD3-Bo-0PG">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ubb-o6-I8t">
+                                        <rect key="frame" x="102" y="166" width="326" height="14"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="ClashX also provides SOCKS5 proxy service for compatibility." id="wWw-zS-aDy">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tzt-uf-Y5l">
+                                        <rect key="frame" x="97" y="30" width="176" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Enable Enhanced Mode" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sZI-0Z-aPw">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="b0c-hN-Wrj" firstAttribute="centerX" secondItem="40y-Ka-9Bz" secondAttribute="centerX" id="2Vi-Va-eaD"/>
                                     <constraint firstItem="nLV-Z3-Nzd" firstAttribute="top" secondItem="3C3-Kh-NWL" secondAttribute="bottom" constant="10" id="6u4-VB-c1n"/>
                                     <constraint firstItem="Q2M-Of-0xJ" firstAttribute="leading" secondItem="TL6-ma-xm9" secondAttribute="leading" id="7VA-qv-3D0"/>
-                                    <constraint firstItem="tzt-uf-Y5l" firstAttribute="top" secondItem="2gg-VT-Q2k" secondAttribute="bottom" constant="10" id="7d3-gP-xVW"/>
                                     <constraint firstAttribute="trailing" secondItem="TL6-ma-xm9" secondAttribute="trailing" constant="20" id="7m2-bH-F3K"/>
                                     <constraint firstItem="TL6-ma-xm9" firstAttribute="leading" secondItem="I0Z-xT-yKf" secondAttribute="leading" id="C2S-kD-wT2"/>
+                                    <constraint firstItem="tzt-uf-Y5l" firstAttribute="top" secondItem="dys-8e-5a2" secondAttribute="bottom" constant="5" id="KsV-lq-sSA"/>
+                                    <constraint firstItem="dys-8e-5a2" firstAttribute="trailing" secondItem="2gg-VT-Q2k" secondAttribute="trailing" id="LBs-HB-8qI"/>
+                                    <constraint firstItem="FJS-8A-wJy" firstAttribute="top" secondItem="Ubb-o6-I8t" secondAttribute="bottom" constant="25" id="LMZ-lz-BIb"/>
                                     <constraint firstItem="40y-Ka-9Bz" firstAttribute="top" secondItem="wS2-K0-jFl" secondAttribute="top" constant="20" id="Lcz-d6-lL9"/>
                                     <constraint firstItem="nLV-Z3-Nzd" firstAttribute="leading" secondItem="3C3-Kh-NWL" secondAttribute="leading" id="Mx9-iT-fi4"/>
+                                    <constraint firstItem="dys-8e-5a2" firstAttribute="top" secondItem="2gg-VT-Q2k" secondAttribute="bottom" constant="5" id="NZb-5C-kBc"/>
                                     <constraint firstAttribute="trailing" secondItem="2gg-VT-Q2k" secondAttribute="trailing" constant="20" id="RUf-Fg-Ube"/>
                                     <constraint firstItem="I0Z-xT-yKf" firstAttribute="leading" secondItem="40y-Ka-9Bz" secondAttribute="trailing" constant="20" id="U1D-1F-F1x"/>
+                                    <constraint firstItem="Ubb-o6-I8t" firstAttribute="leading" secondItem="3C3-Kh-NWL" secondAttribute="leading" id="Uie-pf-qVR"/>
                                     <constraint firstItem="3C3-Kh-NWL" firstAttribute="leading" secondItem="Q2M-Of-0xJ" secondAttribute="leading" id="e3J-xl-tLy"/>
                                     <constraint firstItem="FJS-8A-wJy" firstAttribute="leading" secondItem="nLV-Z3-Nzd" secondAttribute="leading" id="ffF-PW-5mZ"/>
-                                    <constraint firstItem="FJS-8A-wJy" firstAttribute="top" secondItem="nLV-Z3-Nzd" secondAttribute="bottom" constant="25" id="g6a-Ff-SEz"/>
                                     <constraint firstItem="TL6-ma-xm9" firstAttribute="top" secondItem="I0Z-xT-yKf" secondAttribute="bottom" constant="15" id="jGs-Xz-Tgi"/>
                                     <constraint firstItem="I0Z-xT-yKf" firstAttribute="top" secondItem="40y-Ka-9Bz" secondAttribute="top" id="k0r-IE-nyI"/>
+                                    <constraint firstItem="dys-8e-5a2" firstAttribute="leading" secondItem="2gg-VT-Q2k" secondAttribute="leading" id="lHf-cX-gCl"/>
                                     <constraint firstItem="b0c-hN-Wrj" firstAttribute="top" secondItem="FJS-8A-wJy" secondAttribute="top" id="olv-s8-f2A"/>
                                     <constraint firstItem="3C3-Kh-NWL" firstAttribute="top" secondItem="Q2M-Of-0xJ" secondAttribute="bottom" constant="10" id="qV6-ec-vev"/>
                                     <constraint firstItem="2gg-VT-Q2k" firstAttribute="leading" secondItem="FJS-8A-wJy" secondAttribute="leading" id="qc5-bw-jqf"/>
+                                    <constraint firstItem="Ubb-o6-I8t" firstAttribute="top" secondItem="nLV-Z3-Nzd" secondAttribute="bottom" constant="5" id="r9M-Vq-mXd"/>
                                     <constraint firstItem="tzt-uf-Y5l" firstAttribute="leading" secondItem="2gg-VT-Q2k" secondAttribute="leading" id="ukg-PX-b9n"/>
                                     <constraint firstItem="40y-Ka-9Bz" firstAttribute="leading" secondItem="wS2-K0-jFl" secondAttribute="leading" constant="20" id="wHk-Uk-EFE"/>
                                     <constraint firstItem="2gg-VT-Q2k" firstAttribute="top" secondItem="FJS-8A-wJy" secondAttribute="bottom" constant="10" id="xak-LY-Hts"/>
@@ -162,9 +183,9 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I4P-hE-H59">
-                                                <rect key="frame" x="102" y="334" width="122" height="16"/>
+                                                <rect key="frame" x="102" y="334" width="129" height="16"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="HTTP/HTTPS Proxy" id="cPT-GL-UUE">
-                                                    <font key="font" metaFont="system"/>
+                                                    <font key="font" metaFont="systemBold"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
@@ -210,9 +231,9 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aFt-W5-kXH">
-                                                <rect key="frame" x="102" y="171" width="94" height="16"/>
+                                                <rect key="frame" x="102" y="171" width="100" height="16"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Gateway Mode" id="iYb-3l-cf8">
-                                                    <font key="font" metaFont="system"/>
+                                                    <font key="font" metaFont="systemBold"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
@@ -227,40 +248,40 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fpK-33-y3N">
-                                                <rect key="frame" x="97" y="101" width="176" height="32"/>
+                                                <rect key="frame" x="97" y="97" width="176" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Enable Enhanced Mode" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EeP-JT-dwA">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                             </button>
                                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XSY-sN-QDV">
-                                                <rect key="frame" x="102" y="88" width="330" height="15"/>
+                                                <rect key="frame" x="102" y="84" width="330" height="15"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Then change the network settings in the remote machine." id="lf2-S6-7dZ">
-                                                    <font key="font" metaFont="system" size="12"/>
+                                                    <font key="font" metaFont="cellTitle"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rFt-XR-te4">
-                                                <rect key="frame" x="102" y="68" width="277" height="15"/>
+                                                <rect key="frame" x="102" y="64" width="277" height="15"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="- Set Gateway to the IP address of this machine." id="OYb-5M-u1t">
-                                                    <font key="font" metaFont="system" size="12"/>
+                                                    <font key="font" metaFont="cellTitle"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jk3-i8-QRG">
-                                                <rect key="frame" x="102" y="28" width="250" height="15"/>
+                                                <rect key="frame" x="102" y="24" width="250" height="15"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="- Keep IP address and netmask unchanged." id="IUf-JN-NDa">
-                                                    <font key="font" metaFont="system" size="12"/>
+                                                    <font key="font" metaFont="cellTitle"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FHV-Tk-9JG">
-                                                <rect key="frame" x="102" y="48" width="131" height="15"/>
+                                                <rect key="frame" x="102" y="44" width="131" height="15"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="- Set DNS to 192.0.2.2" id="j4M-yv-02I">
-                                                    <font key="font" metaFont="system" size="12"/>
+                                                    <font key="font" metaFont="cellTitle"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
@@ -307,7 +328,7 @@
                                             <constraint firstItem="VCE-zH-GwZ" firstAttribute="top" secondItem="I4P-hE-H59" secondAttribute="bottom" constant="10" id="uyQ-29-SQW"/>
                                             <constraint firstItem="Jk3-i8-QRG" firstAttribute="leading" secondItem="FHV-Tk-9JG" secondAttribute="leading" id="vub-lz-fzM"/>
                                             <constraint firstItem="rFt-XR-te4" firstAttribute="leading" secondItem="XSY-sN-QDV" secondAttribute="leading" id="yCO-xV-Z6F"/>
-                                            <constraint firstItem="fpK-33-y3N" firstAttribute="top" secondItem="dyx-1R-Ai2" secondAttribute="bottom" constant="1" id="zsI-TN-oIK"/>
+                                            <constraint firstItem="fpK-33-y3N" firstAttribute="top" secondItem="dyx-1R-Ai2" secondAttribute="bottom" constant="5" id="zsI-TN-oIK"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -316,7 +337,7 @@
                     </tabViewItems>
                 </tabView>
                 <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="d0A-7g-51b">
-                    <rect key="frame" x="370" y="524" width="170" height="37"/>
+                    <rect key="frame" x="370" y="526" width="170" height="37"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Setup Guide" id="3sO-VL-19h">
                         <font key="font" metaFont="system" size="31"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -324,14 +345,14 @@
                     </textFieldCell>
                 </textField>
                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="NB4-Pk-Tgb">
-                    <rect key="frame" x="205" y="511" width="500" height="5"/>
+                    <rect key="frame" x="205" y="513" width="500" height="5"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="eV0-js-xnx"/>
                         <constraint firstAttribute="width" constant="500" id="qXl-88-Hs5"/>
                     </constraints>
                 </box>
                 <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6FB-yr-B6d">
-                    <rect key="frame" x="288" y="487" width="334" height="16"/>
+                    <rect key="frame" x="288" y="489" width="334" height="16"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="A few steps to allow ClashX to handle network traffics." id="UGP-ew-Jdy">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -388,7 +409,7 @@
                 <constraint firstItem="NB4-Pk-Tgb" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="Hsj-mf-vOH"/>
                 <constraint firstAttribute="bottom" secondItem="Ahf-Kt-Lja" secondAttribute="bottom" constant="14" id="Hyi-yv-bWo"/>
                 <constraint firstAttribute="trailing" secondItem="cg7-yZ-FQe" secondAttribute="trailing" id="JtL-Vd-MIs"/>
-                <constraint firstItem="Shp-0B-ILM" firstAttribute="top" secondItem="6FB-yr-B6d" secondAttribute="bottom" constant="8" symbolic="YES" id="Kj7-NZ-DcI"/>
+                <constraint firstItem="Shp-0B-ILM" firstAttribute="top" secondItem="6FB-yr-B6d" secondAttribute="bottom" constant="10" id="Kj7-NZ-DcI"/>
                 <constraint firstItem="ZrH-md-vkM" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Ql4-L2-1dQ"/>
                 <constraint firstAttribute="trailing" secondItem="ZrH-md-vkM" secondAttribute="trailing" id="UDf-eP-ymq"/>
                 <constraint firstItem="sfk-nW-rYj" firstAttribute="centerY" secondItem="Ahf-Kt-Lja" secondAttribute="centerY" id="Uoc-Tl-2Za"/>
