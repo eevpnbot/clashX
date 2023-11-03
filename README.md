@@ -1,9 +1,4 @@
-<h1 align="center">
-  <img src="https://github.com/Dreamacro/clash/raw/master/docs/logo.png" alt="Clash" width="200">
-  <br>
-  ClashX
-  <br>
-</h1>
+
 
 
 A rule based proxy For Mac base on [Clash](https://github.com/Dreamacro/clash).
